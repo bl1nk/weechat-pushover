@@ -26,9 +26,11 @@ def msg_cb(data, bufferp, date, tagsn, isdisplayed, ishilight, prefix, message):
         if int(ishilight) and not isprivate:
             title = (weechat.buffer_get_string(bufferp, "short_name") or
                      weechat.buffer_get_string(bufferp, "name"))
+            msg = "<" + prefix + "> " + message
         else:
             title = prefix
-        send_push(title, message)
+            msg = message
+        send_push(title, msg)
     return weechat.WEECHAT_RC_OK
 
 
