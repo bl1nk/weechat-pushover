@@ -7,7 +7,7 @@ Notifies of hilights and private messages using pushover.net.
 Install dependencies and put script in `$HOME/.weechat/python/`
 
 ```bash
-$ pip install -r requirements
+$ pip install -r requirements.txt
 $ cp pushover.py $HOME/.weechat/python
 ```
 
